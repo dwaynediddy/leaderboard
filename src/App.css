@@ -1,3 +1,28 @@
 .App {
   text-align: center;
 }
+
+.nav {
+  display: flex;
+  padding: 1rem;
+  list-style: none;
+
+}
+
+.navBar {
+  width: 100%;
+  background-color: #111111;
+  color: #ffffff;
+  outline: none;
+}
+
+li { 
+  padding: 1rem;
+  color: #ffffff;
+  float: right
+} 
+
+.navbar li a:hover { 
+  color: rgb(230, 149, 77); 
+} 
+
