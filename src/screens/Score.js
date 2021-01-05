@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
 
-const option = [
-    {value: 1, label: '1 Point'}, 
-    {value: 2, label: '2 Points'},
-    {value: 3, label: '3 Points'}
-]
 
 const Score = () => {
+    
+    const option = [
+        {value: 1, label: '1 Point'}, 
+        {value: 2, label: '2 Points'},
+        {value: 3, label: '3 Points'}
+    ]
 
     const [selectedValue, setSelectedValue ] = useState(null)
+
+    const handleChange = obj => {
+        setSelectedValue(obj)
+    }
 
     return (
         <>
@@ -19,6 +24,7 @@ const Score = () => {
                 <Select
                     value={selectedValue}
                     options={option}
+                    onChange={handleChange}
                 />
                 How many points did you get for Loot:
                 <Select

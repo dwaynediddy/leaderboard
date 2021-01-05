@@ -1,5 +1,4 @@
 import Navbar from './components/Navbar'
-import Header from './components/Header'
 import Home from './screens/Home'
 import './App.css'
 
