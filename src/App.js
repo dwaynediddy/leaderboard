@@ -1,14 +1,14 @@
-import Header from './components/Header'
 import Navbar from './components/Navbar'
-import './App.css';
+import Home from './screens/Home'
+import './App.css'
 
 function App() {
   return (
     <>
-    <Navbar />
-    <div className="App">
-      <Header/>
-    </div>
+      <Navbar />
+      <div className="App">
+        <Home />
+      </div>
     </>
   );
 }
