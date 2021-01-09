@@ -3,6 +3,10 @@ import Select from 'react-select'
 
 
 const Score = () => {
+
+    submitHandler = () => {
+        
+    }
     
     const option = [
         {value: 1, label: '1 Point'}, 
@@ -41,7 +45,7 @@ const Score = () => {
     return (
         <>
             <h3>Add your points</h3>
-            <div>
+            <div className="scoreSheet">
                 How many points did you get for Scales:
                 <Select
                     value={selectedValue}
@@ -66,6 +70,11 @@ const Score = () => {
                     options={deaths}
                     onChange={handleDeaths}
                 />
+
+                <button 
+                onClick={submitHandler}>
+                    
+                </button>
 
                 <br />
                 <b>Selected Value: </b>
