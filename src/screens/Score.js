@@ -3,11 +3,20 @@ import Select from 'react-select'
 
 
 const Score = () => {  
-    
+    //should make into an API
     const option = [
         {value: 1, label: '1 Point'}, 
         {value: 2, label: '2 Points'},
         {value: 3, label: '3 Points'}
+    ]
+    const items = [
+        {value: 3, label: 'Jar'},
+        {value: 4, label: 'Onyx'},
+        {value: 5, label: 'Fang'},
+        {value: 5, label: 'Visage'},
+        {value: 10, label: 'Mutagen'},
+        {value: 10, label: 'Pet'},
+     
     ]
     const deaths = [
         {value: 0, label: '0'},
@@ -23,6 +32,7 @@ const Score = () => {
     const [selectedLoot, setSelectedLoot ] = useState(null)
     const [selectedTime, setSelectedTime ] = useState(null)
     const [selectedDeaths, setSelectedDeaths] = useState(null)
+    const [selectedItems, setSelectedItems] = useState(null)
     
     const handleChange = obj => {
         setSelectedValue(obj)
@@ -36,9 +46,17 @@ const Score = () => {
     const handleDeaths = obj => {
         setSelectedDeaths(obj)
     }
+    const handleItems = obj => {
+        setSelectedItems(obj)
+    }
     
     const submitHandler = () => {
-        console.log('button clicked')
+        alert('button clicked')
+    }
+
+    const submitTotal = () => {
+        //can have admin review
+        alert('total submitted')
     }
     
     return (
@@ -69,6 +87,12 @@ const Score = () => {
                     options={deaths}
                     onChange={handleDeaths}
                 />
+                Did you recieve an Item:
+                <Select
+                    value={selectedItems}
+                    options={items}
+                    onChange={handleItems}
+                />
 
                 <button 
                 onClick={submitHandler}>
@@ -76,9 +100,14 @@ const Score = () => {
                 </button>
 
                 <br />
-                <b>Selected Value: </b>
+                {/* add point calculator */}
+                <b>Total Points:  </b>
+                <br />
 
-                <pre>{JSON.stringify(selectedValue, selectedTime, selectedLoot, selectedDeaths, null, 2)}</pre>
+                <button onClick={submitTotal}>
+                    Submit Total
+                </button>
+
                 
             </div>
         </>
