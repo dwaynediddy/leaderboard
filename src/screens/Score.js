@@ -2,11 +2,7 @@ import React, { useState } from 'react'
 import Select from 'react-select'
 
 
-const Score = () => {
-
-    submitHandler = () => {
-        
-    }
+const Score = () => {  
     
     const option = [
         {value: 1, label: '1 Point'}, 
@@ -21,13 +17,13 @@ const Score = () => {
         {value: -4, label: '4'},
         {value: -5, label: '5'}
     ]
-
-
+    
+    
     const [selectedValue, setSelectedValue ] = useState(null)
     const [selectedLoot, setSelectedLoot ] = useState(null)
     const [selectedTime, setSelectedTime ] = useState(null)
     const [selectedDeaths, setSelectedDeaths] = useState(null)
-
+    
     const handleChange = obj => {
         setSelectedValue(obj)
     }
@@ -41,7 +37,10 @@ const Score = () => {
         setSelectedDeaths(obj)
     }
     
-
+    const submitHandler = () => {
+        console.log('button clicked')
+    }
+    
     return (
         <>
             <h3>Add your points</h3>
@@ -51,13 +50,13 @@ const Score = () => {
                     value={selectedValue}
                     options={option}
                     onChange={handleChange}
-                />
+                    />
                 How many points did you get for Loot:
                 <Select
                     value={selectedLoot}
                     options={option}
                     onChange={handleLoot}
-                />
+                    />
                 How many points did you get for Time:
                 <Select
                     value={selectedTime}
@@ -73,7 +72,7 @@ const Score = () => {
 
                 <button 
                 onClick={submitHandler}>
-                    
+                    Enter Score
                 </button>
 
                 <br />
