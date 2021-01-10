@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
 
+const axios = require('axios')
 
 const Score = () => {  
     //should make into an API
