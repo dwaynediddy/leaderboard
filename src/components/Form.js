@@ -14,16 +14,16 @@ const Form = (props) => {
             text
         },])
     }
-
-    const handleKeyPress = ({ target }) => {
-        if (target.keyCode === 13) {
+//trying to use enter to submit
+    const handleKeyPress = e => {
+        if (e.keyCode === 'enter') {
             onItemSubmit()
         }
     }
 
     return (
         <div>
-           <input onChange={onInPutChange} onKeyPress={onItemSubmit} />
+           <input onChange={onInPutChange} onKeyPress={handleKeyPress} />
            <button onClick={onItemSubmit} type="submit">
                 Add
            </button>

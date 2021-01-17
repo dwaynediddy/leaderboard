@@ -54,7 +54,7 @@ const Score = () => {
     const submitHandler = () => {
         //api fetch here
 
-        alert(`${selectedValue}`)
+        // alert(`${selectedValue}`)
     }
 
     const submitTotal = (e) => {
@@ -64,7 +64,7 @@ const Score = () => {
         
           }
 
-        alert({option})
+        // alert({option})
     
 
 
