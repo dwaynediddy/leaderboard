@@ -4,6 +4,7 @@ import Home from '../screens/Home'
 import Score from'../screens/Score'
 import Boss from '../screens/Boss'
 import Profile from '../screens/Profile'
+import TickOffMulti from '../screens/TickOffMulti'
 
 const Navbar = () => {
     return (
@@ -23,6 +24,9 @@ const Navbar = () => {
                         <li>
                             <Link to='/Profile'>Player Profile</Link>
                         </li>
+                        <li>
+                            <Link to='/Multi'>Multi tracker</Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -31,6 +35,7 @@ const Navbar = () => {
                 <Route path='/Score' component={Score} />
                 <Route path='/Boss' component={Boss} />
                 <Route path='/Profile' component={Profile} />
+                <Route path='/Multi' component={TickOffMulti} />
 
             </Switch>
         </Router>
