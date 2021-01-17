@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import List from '../components/List'
 import Form from '../components/Form'
 
@@ -9,12 +9,15 @@ const itemSchema = {
 }
 
 export const TickOffMulti = () => {
-    const [ list, setList ] = useState([])
+    const [ list, setList ] = useState(JSON.parse(localStorage.getItem('todoList')) ?? [])
+    useEffect(() => {
+        localStorage.setItem('todoList', JSON.stringify(list))
+    }, [list])
     return (
         <div className='todo'>
             <h2>Add Multi Selections</h2>
             <Form itemSchema={itemSchema} setList={setList} />
-            <List list={list} />
+            <List list={list} setList={setList} />
         </div>
       );
     }
