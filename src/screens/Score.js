@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
 
-
 const Score = () => {  
     //should make into an API
+    
     const option = [
         {value: 1, label: '1 Point'}, 
         {value: 2, label: '2 Points'},
         {value: 3, label: '3 Points'}
     ]
     const items = [
+        {value: 0, label: 'none'},
         {value: 3, label: 'Jar'},
         {value: 4, label: 'Onyx'},
         {value: 5, label: 'Fang'},
@@ -51,14 +52,23 @@ const Score = () => {
     }
     
     const submitHandler = () => {
-        alert('button clicked')
+        //api fetch here
+
+        alert(`${selectedValue}`)
     }
 
-    const submitTotal = () => {
-        //can have admin review
-        alert('total submitted')
+    const submitTotal = (e) => {
+        //can have admin review and add 
+          for (let i = 0; i <option.value; ++i) {
+              let option = option.value[i]
+          }
+
+        alert({option})
     }
+
+
     
+
     return (
         <>
             <h3>Add your points</h3>
@@ -101,7 +111,7 @@ const Score = () => {
 
                 <br />
                 {/* add point calculator */}
-                <b>Total Points:  </b>
+                <b>Total Points: {submitTotal} </b>
                 <br />
 
                 <button onClick={submitTotal}>
