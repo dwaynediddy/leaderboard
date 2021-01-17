@@ -61,11 +61,11 @@ const Score = () => {
         //can have admin review and add 
         //   for (let i = 0; i <option.value; ++i) {
         //       let option = option.value[i]
-        alert(`youhave submitted ${option} but this shit doesnt work yet so doesnt really do shit`)
+        
           }
 
         alert({option})
-    }
+    
 
 
     
