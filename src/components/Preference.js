@@ -1,12 +1,12 @@
 import React from 'react'
 
-
-const Home = () => {
+const Preference = () => {
     return (
         <div>
+            <h2>Preference</h2>
             
         </div>
     )
 }
 
-export default Home
+export default Preference
