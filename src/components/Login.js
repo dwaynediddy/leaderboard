@@ -13,17 +13,13 @@ async function loginUser(credentials) {
         .then(data => data.json())
 }
 
-export default function login({ setToken }) {
-
-}
-
 const Login = ({ setToken }) => {
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
 
     const handleSubmit = async e => {
         e.preventDefault()
-        const token = await loginuser({ 
+        const token = await loginUser({ 
             username,
             password
         })

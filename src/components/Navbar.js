@@ -44,9 +44,9 @@ const Navbar = () => {
                             <Preference />
                         </li> */}
                         <li>
-                            <Link to='/Login'>
+                            {/* <Link to='/Login'>
                                 Login 
-                            </Link>
+                            </Link> */}
                         </li>
                     </ul>
                 </nav>
