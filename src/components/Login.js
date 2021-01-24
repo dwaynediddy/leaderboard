@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import '../styles/Login.css'
 
 async function loginUser(credentials) {
+    //node server.js to run server
     return fetch('http://localhost:5000/login', { 
         method: 'POST',
         headers: {
