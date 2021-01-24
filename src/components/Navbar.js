@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { FaSlidersH } from 'react-icons/fa'
 import Home from '../screens/Home'
 import Score from'../screens/Score'
 import Boss from '../screens/Boss'
@@ -44,9 +45,7 @@ const Navbar = () => {
                             <Preference />
                         </li> */}
                         <li>
-                            {/* <Link to='/Login'>
-                                Login 
-                            </Link> */}
+                            <FaSlidersH size={22} color={'white'} />
                         </li>
                     </ul>
                 </nav>
