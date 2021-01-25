@@ -9,6 +9,7 @@ import TickOffMulti from '../screens/TickOffMulti'
 import Login from '../components/Login'
 import Preference from '../components/Preference'
 import Dashboard from '../components/Dashboard'
+import Dropdown from '../components/Dropdown'
 
 const Navbar = () => {
     const [token, setToken] = useState()
@@ -36,16 +37,13 @@ const Navbar = () => {
                         <li>
                             <Link to='/Multi'>Multi tracker</Link>
                         </li>
-                        {/* <li>
-                            <Link to='/Dashboard' />
-                            <Dashboard />
+
+                        <li>
+                            <Dropdown />
                         </li>
                         <li>
-                            <Link to='/Preference' />
-                            <Preference />
-                        </li> */}
-                        <li>
                             <FaSlidersH size={22} color={'white'} />
+                            
                         </li>
                     </ul>
                 </nav>
